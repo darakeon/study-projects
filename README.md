@@ -25,3 +25,4 @@ mas sobre as etapas do desenvolvimento em si.
 ## Etapas de desenvolvimento
 
 - [Repositório](docs/0.repository.md)
+- [Infraestrutura de Desenvolvimento](docs/1.infra-dev.md)
