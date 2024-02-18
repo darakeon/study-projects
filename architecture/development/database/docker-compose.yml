@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  db-postgres:
+    image: postgres:16.2-alpine3.19
+    restart: always
+    hostname: lan-db-postgres
+    container_name: study-projects-db-postgres
+    environment:
+      - POSTGRES_DB=study-projects
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    volumes:
+      - ./data:/var/lib/postgres
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
