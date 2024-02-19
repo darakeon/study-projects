@@ -11,12 +11,19 @@ namespace API.Controllers
 		public IEnumerable<OccupationModel> Get()
 		{
 			var occupations = new List<OccupationModel>();
-			
+
 			occupations.Add(
 				new OccupationModel(1, "Code", DateTime.Now, DateTime.Now)
 			);
 
 			return occupations;
+		}
+
+		[HttpPost(Name = "PostOccupation")]
+		public OccupationModel Post(OccupationModel occupation)
+		{
+			occupation.Save();
+			return occupation;
 		}
 	}
 }
