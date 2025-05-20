@@ -1,0 +1,1 @@
+﻿namespace PrintHouse;internal class Dispensa{	// Passo 1	public Int32 Prateleiras;	public Double Tamanho;	// Passo 3	public Dispensa(Int32 prateleiras, Double tamanho)	{		Prateleiras = prateleiras;		Tamanho = tamanho;	}}
